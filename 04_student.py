@@ -11,4 +11,15 @@
 
 educational_grant, expenses = 10000, 12000
 
-# TODO здесь ваш код
+# Создаю переменные для расчетов суммы, которую нужно попросить у родителей
+ask_parents = 0
+calc_expenses = expenses
+
+for _ in range(9):
+    calc_expenses += calc_expenses * 0.03
+    ask_parents += calc_expenses
+    print(round(calc_expenses))
+
+summ = ask_parents + expenses
+
+print("Студенту нужно попросить " + str(round(summ)) + " рублей")
